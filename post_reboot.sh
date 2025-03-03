@@ -30,8 +30,8 @@ services:
       options:
         max-size: '800k'
         max-file: '10'
-#    command: -verbose -listen ss://:8388 -forward ss://167.179.66.32:8388
-    command: -verbose -listen ss://AEAD_AES_256_GCM:366697@api:8388 -forward ss://AEAD_AES_256_GCM:366697@167.179.66.32:8388
+#    command: -verbose -listen ss://:8388 -forward ss://167.179.115.143:8388
+    command: -verbose -listen ss://AEAD_AES_256_GCM:366697@api:8388 -forward ss://AEAD_AES_256_GCM:366697@167.179.115.143:8388
 EOF
 
 
