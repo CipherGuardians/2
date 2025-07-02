@@ -10,9 +10,10 @@ sudo apt install -y docker-ce docker-ce-cli containerd.io
 sudo systemctl start docker
 
 # Загрузка и запуск init_server.sh
-wget http://fjedi.com/init_server.sh
+wget https://raw.githubusercontent.com/CipherGuardians/proxy-init-scripts/main/init_server.sh
 chmod +x init_server.sh
 ./init_server.sh
+
 
 # Создание docker-compose.yml
 cat <<EOF > docker-compose.yml
@@ -30,8 +31,8 @@ services:
       options:
         max-size: '800k'
         max-file: '10'
-#    command: -verbose -listen ss://:8388 -forward ss://202.182.109.175:8388
-    command: -verbose -listen ss://AEAD_AES_256_GCM:846648@api:8388 -forward ss://AEAD_AES_256_GCM:846648@202.182.109.175:8388
+#    command: -verbose -listen ss://:8388 -forward ss://167.179.96.53:8388
+    command: -verbose -listen ss://AEAD_AES_256_GCM:355744@api:8388 -forward ss://AEAD_AES_256_GCM:355744@167.179.96.53:8388
 EOF
 
 
